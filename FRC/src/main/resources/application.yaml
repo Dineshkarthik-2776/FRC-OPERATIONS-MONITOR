@@ -1,3 +1,14 @@
 spring:
   application:
     name: FRC
+
+  datasource:
+    url: ${DB_URL:jdbc:mysql://localhost:3307/${DB_NAME:frc_db}}
+    username: ${DB_USER:frcadmin}
+    password: ${DB_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
